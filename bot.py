@@ -34,4 +34,5 @@ if __name__ == '__main__':
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button))
-    app.run_polling()
+    url = f"https://api.9987up.com/api/web/game/v1/wingo/last-results?gameId={g_id}"
+
